@@ -5,6 +5,31 @@
 [ext_resource type="Script" uid="uid://du76rrqnfyxmm" path="res://button.gd" id="2_gmcsc"]
 [ext_resource type="Texture2D" uid="uid://bwnvymv5bhrf8" path="res://character/nebula-teal-tile.png" id="2_ns3he"]
 [ext_resource type="AudioStream" uid="uid://tgmfnkjkottd" path="res://mp3_3 - Lunar Serenity (Loop).mp3" id="5_fa1tu"]
+[ext_resource type="Texture2D" path="res://ui/hud/logo_astroslime.png" id="6_logo"]
+[ext_resource type="Texture2D" path="res://ui/assets/botones/btn_play_normal.png" id="7_play_normal"]
+[ext_resource type="Texture2D" path="res://ui/assets/botones/btn_play_hover.png" id="8_play_hover"]
+[ext_resource type="Texture2D" path="res://ui/assets/botones/btn_play_pressed.png" id="9_play_pressed"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_play_normal"]
+texture = ExtResource("7_play_normal")
+texture_margin_left = 10.0
+texture_margin_top = 10.0
+texture_margin_right = 10.0
+texture_margin_bottom = 10.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_play_hover"]
+texture = ExtResource("8_play_hover")
+texture_margin_left = 10.0
+texture_margin_top = 10.0
+texture_margin_right = 10.0
+texture_margin_bottom = 10.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_play_pressed"]
+texture = ExtResource("9_play_pressed")
+texture_margin_left = 10.0
+texture_margin_top = 10.0
+texture_margin_right = 10.0
+texture_margin_bottom = 10.0
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_gmcsc"]
 atlas = ExtResource("1_bj1uy")
@@ -394,9 +419,33 @@ offset_right = 767.0
 offset_bottom = 635.0
 
 [node name="Button" type="Button" parent="CenterContainer" unique_id=856246494]
+texture_filter = 1
+custom_minimum_size = Vector2(210, 68)
 layout_mode = 2
+focus_mode = 0
+theme_override_colors/font_color = Color(0.88, 0.98, 1, 1)
+theme_override_colors/font_hover_color = Color(0.361, 0.882, 0.902, 1)
+theme_override_font_sizes/font_size = 28
+theme_override_styles/normal = SubResource("StyleBoxTexture_play_normal")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_play_pressed")
+theme_override_styles/hover = SubResource("StyleBoxTexture_play_hover")
 text = "PLAY"
 script = ExtResource("2_gmcsc")
+
+[node name="LogoTitulo" type="TextureRect" parent="."]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -280.0
+offset_top = 16.0
+offset_right = 280.0
+offset_bottom = 168.0
+grow_horizontal = 2
+texture = ExtResource("6_logo")
+expand_mode = 1
+stretch_mode = 5
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=626363435]
 stream = ExtResource("5_fa1tu")

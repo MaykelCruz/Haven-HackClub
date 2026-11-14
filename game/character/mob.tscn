@@ -7,12 +7,16 @@
 [ext_resource type="AudioStream" uid="uid://34xltlwh4x2m" path="res://mp3_2 - Galactic Odyssey (Loop).mp3" id="5_7b1sa"]
 [ext_resource type="Texture2D" uid="uid://s3a3brd4mw56" path="res://character/fondo-prueba.jpeg" id="5_xfxrl"]
 [ext_resource type="PackedScene" path="res://ui/hud/HUD.tscn" id="6_hud"]
+[ext_resource type="Script" path="res://character/oleadas.gd" id="7_oleadas"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nsu4t"]
-size = Vector2(128, 116)
+size = Vector2(124, 92)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pt1l8"]
 size = Vector2(6330, 146)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pared"]
+size = Vector2(80, 900)
 
 [node name="Main" type="Node2D" unique_id=2001321709]
 position = Vector2(-2, -57)
@@ -27,7 +31,7 @@ shape = SubResource("RectangleShape2D_nsu4t")
 
 [node name="SorrySlime" type="Sprite2D" parent="CharacterBody2D/CollisionShape2D" unique_id=180682444]
 light_mask = 0
-position = Vector2(0, 8)
+position = Vector2(0, -1)
 scale = Vector2(0.17777778, 0.19999999)
 texture = ExtResource("1_ix33q")
 
@@ -46,12 +50,12 @@ script = ExtResource("3_xfxrl")
 position = Vector2(0, 56)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1922733783]
-position = Vector2(1376, 716)
+position = Vector2(1376, 677)
 shape = SubResource("RectangleShape2D_pt1l8")
 
 [node name="Sprite2D" type="Sprite2D" parent="StaticBody2D/CollisionShape2D" unique_id=1489002076]
 texture_filter = 1
-position = Vector2(92, -214)
+position = Vector2(92, -175)
 scale = Vector2(5.8125, 5.0781245)
 texture = ExtResource("4_xfxrl")
 
@@ -84,13 +88,13 @@ scale = Vector2(1.4496619, 1.0185468)
 texture = ExtResource("4_xfxrl")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D" unique_id=1069194425]
-position = Vector2(1319, -118)
+position = Vector2(1319, -79)
 rotation = -3.1415925
 shape = SubResource("RectangleShape2D_pt1l8")
 
 [node name="Sprite2D" type="Sprite2D" parent="StaticBody2D/CollisionShape2D2" unique_id=841690630]
 texture_filter = 1
-position = Vector2(148, -214)
+position = Vector2(148, -175)
 scale = Vector2(5.8125, 5.0781245)
 texture = ExtResource("4_xfxrl")
 
@@ -153,8 +157,19 @@ flip_h = true
 
 [node name="StaticBody2D2" type="StaticBody2D" parent="." unique_id=1752710617]
 
+[node name="ParedIzquierda" type="CollisionShape2D" parent="StaticBody2D2"]
+position = Vector2(-450, 300)
+shape = SubResource("RectangleShape2D_pared")
+
+[node name="ParedDerecha" type="CollisionShape2D" parent="StaticBody2D2"]
+position = Vector2(1550, 300)
+shape = SubResource("RectangleShape2D_pared")
+
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1327658182]
 stream = ExtResource("5_7b1sa")
 volume_db = 8.447
 autoplay = true
 [node name="HUD" parent="." instance=ExtResource("6_hud")]
+
+[node name="Oleadas" type="Node" parent="."]
+script = ExtResource("7_oleadas")

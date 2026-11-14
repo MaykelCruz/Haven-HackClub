@@ -1,27 +1,50 @@
-[gd_scene format=3 uid="uid://d2pvpbhp6rh27"]
+[gd_scene format=3]
 
-[ext_resource type="Script" uid="uid://dcb52c2js0ncq" path="res://ui/hud/hud.gd" id="1_hud_script"]
-[ext_resource type="Texture2D" uid="uid://b5fesjqy3koq6" path="res://ui/hud/slot_bloqueado.png" id="2_bloqueado"]
-[ext_resource type="Texture2D" uid="uid://bkvvx74t5r2cp" path="res://ui/hud/slot_pulso.png" id="3_pulso"]
-[ext_resource type="Texture2D" uid="uid://bjbssj50m0w5m" path="res://ui/hud/slot_dash.png" id="4_dash"]
-[ext_resource type="Texture2D" uid="uid://cpaftqwrvjmjh" path="res://ui/hud/slot_conduccion.png" id="5_conduccion"]
-[ext_resource type="Texture2D" uid="uid://bau4kerjnjb5g" path="res://ui/hud/marco_contador.png" id="6_marco"]
-[ext_resource type="Texture2D" uid="uid://bt0hf4lg08d6t" path="res://ui/hud/icono_slime.png" id="7_slime"]
-[ext_resource type="Texture2D" uid="uid://be6snxfff0e35" path="res://ui/assets/barras/vida_llena.png" id="8_vida_llena"]
-[ext_resource type="Texture2D" uid="uid://dtm116xjjlipy" path="res://ui/assets/barras/vida_vacia.png" id="9_vida_vacia"]
-[ext_resource type="Texture2D" uid="uid://bl4yyotuf3fnf" path="res://ui/assets/teclas/tecla_q.png" id="10_q"]
-[ext_resource type="Texture2D" uid="uid://b3y3oshr3l7" path="res://ui/assets/teclas/tecla_e.png" id="11_e"]
-[ext_resource type="Texture2D" uid="uid://es20cxexl2q" path="res://ui/assets/teclas/tecla_shift.png" id="12_shift"]
-[ext_resource type="Texture2D" uid="uid://bsy8057op3jh" path="res://ui/assets/botones/btn_reiniciar.png" id="13_reiniciar"]
-[ext_resource type="Texture2D" uid="uid://cvnnh1aq7apdc" path="res://ui/assets/botones/btn_pausa.png" id="14_pausa"]
-[ext_resource type="Texture2D" uid="uid://ck6p5fxds6rdd" path="res://ui/assets/botones/btn_audio_on.png" id="15_audio_on"]
-[ext_resource type="Texture2D" uid="uid://dc2m0gg45cyta" path="res://ui/assets/botones/btn_audio_off.png" id="16_audio_off"]
-[ext_resource type="Texture2D" uid="uid://bp0g47ruvs34y" path="res://ui/hud/marco_retrato.png" id="17_marco_retrato"]
-[ext_resource type="Texture2D" uid="uid://k5xfv8lrbx2u" path="res://character/Sorry-Slime.png" id="18_sorry_slime"]
+[ext_resource type="Script" path="res://ui/hud/hud.gd" id="1_hud_script"]
+[ext_resource type="Texture2D" path="res://ui/hud/slot_bloqueado.png" id="2_bloqueado"]
+[ext_resource type="Texture2D" path="res://ui/hud/slot_pulso.png" id="3_pulso"]
+[ext_resource type="Texture2D" path="res://ui/hud/slot_dash.png" id="4_dash"]
+[ext_resource type="Texture2D" path="res://ui/hud/slot_conduccion.png" id="5_conduccion"]
+[ext_resource type="Texture2D" path="res://ui/hud/marco_contador.png" id="6_marco"]
+[ext_resource type="Texture2D" path="res://ui/hud/icono_slime.png" id="7_slime"]
+[ext_resource type="Texture2D" path="res://ui/assets/barras/vida_llena.png" id="8_vida_llena"]
+[ext_resource type="Texture2D" path="res://ui/assets/barras/vida_vacia.png" id="9_vida_vacia"]
+[ext_resource type="Texture2D" path="res://ui/assets/teclas/tecla_q.png" id="10_q"]
+[ext_resource type="Texture2D" path="res://ui/assets/teclas/tecla_e.png" id="11_e"]
+[ext_resource type="Texture2D" path="res://ui/assets/teclas/tecla_shift.png" id="12_shift"]
+[ext_resource type="Texture2D" path="res://ui/assets/botones/btn_reiniciar.png" id="13_reiniciar"]
+[ext_resource type="Texture2D" path="res://ui/assets/botones/btn_pausa.png" id="14_pausa"]
+[ext_resource type="Texture2D" path="res://ui/assets/botones/btn_audio_on.png" id="15_audio_on"]
+[ext_resource type="Texture2D" path="res://ui/assets/botones/btn_audio_off.png" id="16_audio_off"]
+[ext_resource type="Texture2D" path="res://ui/hud/marco_retrato.png" id="17_marco_retrato"]
+[ext_resource type="Texture2D" path="res://character/Sorry-Slime.png" id="18_sorry_slime"]
+[ext_resource type="Texture2D" path="res://ui/assets/botones/btn_menu_normal.png" id="19_btn_menu_normal"]
+[ext_resource type="Texture2D" path="res://ui/assets/botones/btn_menu_hover.png" id="20_btn_menu_hover"]
+[ext_resource type="Texture2D" path="res://ui/assets/botones/btn_menu_pressed.png" id="21_btn_menu_pressed"]
 
-[node name="HUD" type="CanvasLayer" unique_id=1753316437]
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_btn_normal"]
+texture = ExtResource("19_btn_menu_normal")
+texture_margin_left = 6.0
+texture_margin_top = 6.0
+texture_margin_right = 6.0
+texture_margin_bottom = 6.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_btn_hover"]
+texture = ExtResource("20_btn_menu_hover")
+texture_margin_left = 6.0
+texture_margin_top = 6.0
+texture_margin_right = 6.0
+texture_margin_bottom = 6.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_btn_pressed"]
+texture = ExtResource("21_btn_menu_pressed")
+texture_margin_left = 6.0
+texture_margin_top = 6.0
+texture_margin_right = 6.0
+texture_margin_bottom = 6.0
+
+[node name="HUD" type="CanvasLayer"]
 script = ExtResource("1_hud_script")
-mostrar_poderes_en_preview = null
 tex_vida_llena = ExtResource("8_vida_llena")
 tex_vida_vacia = ExtResource("9_vida_vacia")
 tex_bloqueado = ExtResource("2_bloqueado")
@@ -31,7 +54,7 @@ tex_conduccion = ExtResource("5_conduccion")
 tex_audio_on = ExtResource("15_audio_on")
 tex_audio_off = ExtResource("16_audio_off")
 
-[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1845865368]
+[node name="MarginContainer" type="MarginContainer" parent="."]
 anchors_preset = 10
 anchor_right = 1.0
 offset_bottom = 128.0
@@ -40,16 +63,16 @@ theme_override_constants/margin_left = 16
 theme_override_constants/margin_top = 14
 theme_override_constants/margin_right = 16
 
-[node name="TopBar" type="HBoxContainer" parent="MarginContainer" unique_id=2091814044]
+[node name="TopBar" type="HBoxContainer" parent="MarginContainer"]
 layout_mode = 2
 alignment = 1
 
-[node name="LeftCluster" type="HBoxContainer" parent="MarginContainer/TopBar" unique_id=933277091]
+[node name="LeftCluster" type="HBoxContainer" parent="MarginContainer/TopBar"]
 layout_mode = 2
 theme_override_constants/separation = 12
 alignment = 1
 
-[node name="MarcoRetrato" type="TextureRect" parent="MarginContainer/TopBar/LeftCluster" unique_id=333788369]
+[node name="MarcoRetrato" type="TextureRect" parent="MarginContainer/TopBar/LeftCluster"]
 texture_filter = 1
 custom_minimum_size = Vector2(88, 88)
 layout_mode = 2
@@ -58,7 +81,7 @@ texture = ExtResource("17_marco_retrato")
 expand_mode = 1
 stretch_mode = 5
 
-[node name="RetratoSlime" type="TextureRect" parent="MarginContainer/TopBar/LeftCluster/MarcoRetrato" unique_id=1463716966]
+[node name="RetratoSlime" type="TextureRect" parent="MarginContainer/TopBar/LeftCluster/MarcoRetrato"]
 texture_filter = 1
 layout_mode = 1
 anchors_preset = -1
@@ -72,15 +95,15 @@ texture = ExtResource("18_sorry_slime")
 expand_mode = 1
 stretch_mode = 5
 
-[node name="LeftSection" type="VBoxContainer" parent="MarginContainer/TopBar/LeftCluster" unique_id=1120092579]
+[node name="LeftSection" type="VBoxContainer" parent="MarginContainer/TopBar/LeftCluster"]
 layout_mode = 2
 theme_override_constants/separation = 8
 
-[node name="BarraVida" type="HBoxContainer" parent="MarginContainer/TopBar/LeftCluster/LeftSection" unique_id=205103619]
+[node name="BarraVida" type="HBoxContainer" parent="MarginContainer/TopBar/LeftCluster/LeftSection"]
 layout_mode = 2
 theme_override_constants/separation = 6
 
-[node name="Vida1" type="TextureRect" parent="MarginContainer/TopBar/LeftCluster/LeftSection/BarraVida" unique_id=52589446]
+[node name="Vida1" type="TextureRect" parent="MarginContainer/TopBar/LeftCluster/LeftSection/BarraVida"]
 texture_filter = 1
 custom_minimum_size = Vector2(54, 22)
 layout_mode = 2
@@ -88,7 +111,7 @@ texture = ExtResource("8_vida_llena")
 expand_mode = 1
 stretch_mode = 5
 
-[node name="Vida2" type="TextureRect" parent="MarginContainer/TopBar/LeftCluster/LeftSection/BarraVida" unique_id=1218959203]
+[node name="Vida2" type="TextureRect" parent="MarginContainer/TopBar/LeftCluster/LeftSection/BarraVida"]
 texture_filter = 1
 custom_minimum_size = Vector2(54, 22)
 layout_mode = 2
@@ -96,7 +119,7 @@ texture = ExtResource("8_vida_llena")
 expand_mode = 1
 stretch_mode = 5
 
-[node name="Vida3" type="TextureRect" parent="MarginContainer/TopBar/LeftCluster/LeftSection/BarraVida" unique_id=1163727831]
+[node name="Vida3" type="TextureRect" parent="MarginContainer/TopBar/LeftCluster/LeftSection/BarraVida"]
 texture_filter = 1
 custom_minimum_size = Vector2(54, 22)
 layout_mode = 2
@@ -104,16 +127,16 @@ texture = ExtResource("8_vida_llena")
 expand_mode = 1
 stretch_mode = 5
 
-[node name="PowersRow" type="HBoxContainer" parent="MarginContainer/TopBar/LeftCluster/LeftSection" unique_id=1231094768]
+[node name="PowersRow" type="HBoxContainer" parent="MarginContainer/TopBar/LeftCluster/LeftSection"]
 layout_mode = 2
 theme_override_constants/separation = 10
 
-[node name="Pulso" type="VBoxContainer" parent="MarginContainer/TopBar/LeftCluster/LeftSection/PowersRow" unique_id=249965896]
+[node name="Pulso" type="VBoxContainer" parent="MarginContainer/TopBar/LeftCluster/LeftSection/PowersRow"]
 layout_mode = 2
 theme_override_constants/separation = 4
 alignment = 1
 
-[node name="SlotPulso" type="TextureRect" parent="MarginContainer/TopBar/LeftCluster/LeftSection/PowersRow/Pulso" unique_id=983741494]
+[node name="SlotPulso" type="TextureRect" parent="MarginContainer/TopBar/LeftCluster/LeftSection/PowersRow/Pulso"]
 texture_filter = 1
 custom_minimum_size = Vector2(52, 52)
 layout_mode = 2
@@ -121,7 +144,30 @@ texture = ExtResource("3_pulso")
 expand_mode = 1
 stretch_mode = 5
 
-[node name="TeclaQ" type="TextureRect" parent="MarginContainer/TopBar/LeftCluster/LeftSection/PowersRow/Pulso" unique_id=1433020656]
+[node name="CooldownOverlay" type="ColorRect" parent="MarginContainer/TopBar/LeftCluster/LeftSection/PowersRow/Pulso/SlotPulso"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.04, 0.06, 0.12, 0.72)
+
+[node name="LabelCD" type="Label" parent="MarginContainer/TopBar/LeftCluster/LeftSection/PowersRow/Pulso/SlotPulso/CooldownOverlay"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.88, 0.98, 1, 1)
+theme_override_font_sizes/font_size = 16
+text = "8.0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TeclaQ" type="TextureRect" parent="MarginContainer/TopBar/LeftCluster/LeftSection/PowersRow/Pulso"]
 texture_filter = 1
 custom_minimum_size = Vector2(28, 28)
 layout_mode = 2
@@ -130,12 +176,12 @@ texture = ExtResource("10_q")
 expand_mode = 1
 stretch_mode = 5
 
-[node name="Dash" type="VBoxContainer" parent="MarginContainer/TopBar/LeftCluster/LeftSection/PowersRow" unique_id=1836073903]
+[node name="Dash" type="VBoxContainer" parent="MarginContainer/TopBar/LeftCluster/LeftSection/PowersRow"]
 layout_mode = 2
 theme_override_constants/separation = 4
 alignment = 1
 
-[node name="SlotDash" type="TextureRect" parent="MarginContainer/TopBar/LeftCluster/LeftSection/PowersRow/Dash" unique_id=1507712332]
+[node name="SlotDash" type="TextureRect" parent="MarginContainer/TopBar/LeftCluster/LeftSection/PowersRow/Dash"]
 texture_filter = 1
 custom_minimum_size = Vector2(52, 52)
 layout_mode = 2
@@ -143,7 +189,30 @@ texture = ExtResource("4_dash")
 expand_mode = 1
 stretch_mode = 5
 
-[node name="TeclaE" type="TextureRect" parent="MarginContainer/TopBar/LeftCluster/LeftSection/PowersRow/Dash" unique_id=1108932626]
+[node name="CooldownOverlay" type="ColorRect" parent="MarginContainer/TopBar/LeftCluster/LeftSection/PowersRow/Dash/SlotDash"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.04, 0.06, 0.12, 0.72)
+
+[node name="LabelCD" type="Label" parent="MarginContainer/TopBar/LeftCluster/LeftSection/PowersRow/Dash/SlotDash/CooldownOverlay"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.88, 0.98, 1, 1)
+theme_override_font_sizes/font_size = 16
+text = "4.5"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TeclaE" type="TextureRect" parent="MarginContainer/TopBar/LeftCluster/LeftSection/PowersRow/Dash"]
 texture_filter = 1
 custom_minimum_size = Vector2(28, 28)
 layout_mode = 2
@@ -152,12 +221,12 @@ texture = ExtResource("11_e")
 expand_mode = 1
 stretch_mode = 5
 
-[node name="Conduccion" type="VBoxContainer" parent="MarginContainer/TopBar/LeftCluster/LeftSection/PowersRow" unique_id=467875603]
+[node name="Conduccion" type="VBoxContainer" parent="MarginContainer/TopBar/LeftCluster/LeftSection/PowersRow"]
 layout_mode = 2
 theme_override_constants/separation = 4
 alignment = 1
 
-[node name="SlotConduccion" type="TextureRect" parent="MarginContainer/TopBar/LeftCluster/LeftSection/PowersRow/Conduccion" unique_id=1138771745]
+[node name="SlotConduccion" type="TextureRect" parent="MarginContainer/TopBar/LeftCluster/LeftSection/PowersRow/Conduccion"]
 texture_filter = 1
 custom_minimum_size = Vector2(52, 52)
 layout_mode = 2
@@ -165,7 +234,30 @@ texture = ExtResource("5_conduccion")
 expand_mode = 1
 stretch_mode = 5
 
-[node name="TeclaShift" type="TextureRect" parent="MarginContainer/TopBar/LeftCluster/LeftSection/PowersRow/Conduccion" unique_id=386864612]
+[node name="CooldownOverlay" type="ColorRect" parent="MarginContainer/TopBar/LeftCluster/LeftSection/PowersRow/Conduccion/SlotConduccion"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.04, 0.06, 0.12, 0.72)
+
+[node name="LabelCD" type="Label" parent="MarginContainer/TopBar/LeftCluster/LeftSection/PowersRow/Conduccion/SlotConduccion/CooldownOverlay"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.88, 0.98, 1, 1)
+theme_override_font_sizes/font_size = 16
+text = "6.0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TeclaShift" type="TextureRect" parent="MarginContainer/TopBar/LeftCluster/LeftSection/PowersRow/Conduccion"]
 texture_filter = 1
 custom_minimum_size = Vector2(49, 28)
 layout_mode = 2
@@ -174,17 +266,45 @@ texture = ExtResource("12_shift")
 expand_mode = 1
 stretch_mode = 5
 
-[node name="Spacer" type="Control" parent="MarginContainer/TopBar" unique_id=979050293]
+[node name="Spacer" type="Control" parent="MarginContainer/TopBar"]
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="RightSection" type="HBoxContainer" parent="MarginContainer/TopBar" unique_id=117186791]
+[node name="RondaBadge" type="NinePatchRect" parent="MarginContainer/TopBar"]
+texture_filter = 1
+custom_minimum_size = Vector2(210, 44)
+layout_mode = 2
+size_flags_vertical = 0
+texture = ExtResource("6_marco")
+patch_margin_left = 6
+patch_margin_top = 6
+patch_margin_right = 6
+patch_margin_bottom = 6
+
+[node name="LabelRonda" type="Label" parent="MarginContainer/TopBar/RondaBadge"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.361, 0.882, 0.902, 1)
+theme_override_font_sizes/font_size = 18
+text = "RONDA 1/10  |  0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Spacer2" type="Control" parent="MarginContainer/TopBar"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="RightSection" type="HBoxContainer" parent="MarginContainer/TopBar"]
 layout_mode = 2
 size_flags_vertical = 0
 theme_override_constants/separation = 12
 alignment = 2
 
-[node name="DeathCounter" type="NinePatchRect" parent="MarginContainer/TopBar/RightSection" unique_id=1187146954]
+[node name="DeathCounter" type="NinePatchRect" parent="MarginContainer/TopBar/RightSection"]
 texture_filter = 1
 custom_minimum_size = Vector2(130, 48)
 layout_mode = 2
@@ -194,7 +314,7 @@ patch_margin_top = 6
 patch_margin_right = 6
 patch_margin_bottom = 6
 
-[node name="Content" type="HBoxContainer" parent="MarginContainer/TopBar/RightSection/DeathCounter" unique_id=1700701677]
+[node name="Content" type="HBoxContainer" parent="MarginContainer/TopBar/RightSection/DeathCounter"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -204,7 +324,7 @@ grow_vertical = 2
 theme_override_constants/separation = 8
 alignment = 1
 
-[node name="IconoSlime" type="TextureRect" parent="MarginContainer/TopBar/RightSection/DeathCounter/Content" unique_id=1611830121]
+[node name="IconoSlime" type="TextureRect" parent="MarginContainer/TopBar/RightSection/DeathCounter/Content"]
 texture_filter = 1
 custom_minimum_size = Vector2(28, 28)
 layout_mode = 2
@@ -213,7 +333,7 @@ texture = ExtResource("7_slime")
 expand_mode = 1
 stretch_mode = 5
 
-[node name="LabelMuertes" type="Label" parent="MarginContainer/TopBar/RightSection/DeathCounter/Content" unique_id=510881747]
+[node name="LabelMuertes" type="Label" parent="MarginContainer/TopBar/RightSection/DeathCounter/Content"]
 layout_mode = 2
 theme_override_colors/font_color = Color(0.88, 0.98, 1, 1)
 theme_override_font_sizes/font_size = 20
@@ -221,12 +341,12 @@ text = "x 00"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="QuickButtons" type="HBoxContainer" parent="MarginContainer/TopBar/RightSection" unique_id=602221309]
+[node name="QuickButtons" type="HBoxContainer" parent="MarginContainer/TopBar/RightSection"]
 layout_mode = 2
 size_flags_vertical = 4
 theme_override_constants/separation = 6
 
-[node name="BtnReiniciar" type="TextureButton" parent="MarginContainer/TopBar/RightSection/QuickButtons" unique_id=581594113]
+[node name="BtnReiniciar" type="TextureButton" parent="MarginContainer/TopBar/RightSection/QuickButtons"]
 texture_filter = 1
 custom_minimum_size = Vector2(40, 40)
 layout_mode = 2
@@ -235,7 +355,7 @@ texture_normal = ExtResource("13_reiniciar")
 ignore_texture_size = true
 stretch_mode = 5
 
-[node name="BtnPausa" type="TextureButton" parent="MarginContainer/TopBar/RightSection/QuickButtons" unique_id=413833786]
+[node name="BtnPausa" type="TextureButton" parent="MarginContainer/TopBar/RightSection/QuickButtons"]
 texture_filter = 1
 custom_minimum_size = Vector2(40, 40)
 layout_mode = 2
@@ -244,7 +364,7 @@ texture_normal = ExtResource("14_pausa")
 ignore_texture_size = true
 stretch_mode = 5
 
-[node name="BtnAudio" type="TextureButton" parent="MarginContainer/TopBar/RightSection/QuickButtons" unique_id=1219784159]
+[node name="BtnAudio" type="TextureButton" parent="MarginContainer/TopBar/RightSection/QuickButtons"]
 texture_filter = 1
 custom_minimum_size = Vector2(40, 40)
 layout_mode = 2
@@ -253,6 +373,203 @@ texture_normal = ExtResource("15_audio_on")
 ignore_texture_size = true
 stretch_mode = 5
 
+[node name="MenuPausa" type="ColorRect" parent="."]
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.039, 0.055, 0.11, 0.68)
+
+[node name="PanelPausa" type="NinePatchRect" parent="MenuPausa"]
+texture_filter = 1
+custom_minimum_size = Vector2(300, 260)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -150.0
+offset_top = -130.0
+offset_right = 150.0
+offset_bottom = 130.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("6_marco")
+patch_margin_left = 6
+patch_margin_top = 6
+patch_margin_right = 6
+patch_margin_bottom = 6
+
+[node name="MarginContainer" type="MarginContainer" parent="MenuPausa/PanelPausa"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 28
+theme_override_constants/margin_top = 24
+theme_override_constants/margin_right = 28
+theme_override_constants/margin_bottom = 24
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MenuPausa/PanelPausa/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 14
+alignment = 1
+
+[node name="HeaderPausa" type="HBoxContainer" parent="MenuPausa/PanelPausa/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 10
+alignment = 1
+
+[node name="IconoPausa" type="TextureRect" parent="MenuPausa/PanelPausa/MarginContainer/VBoxContainer/HeaderPausa"]
+texture_filter = 1
+custom_minimum_size = Vector2(30, 30)
+layout_mode = 2
+size_flags_vertical = 4
+texture = ExtResource("7_slime")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="TituloPausa" type="Label" parent="MenuPausa/PanelPausa/MarginContainer/VBoxContainer/HeaderPausa"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.361, 0.882, 0.902, 1)
+theme_override_font_sizes/font_size = 26
+text = "PAUSA"
+horizontal_alignment = 1
+
+[node name="BtnContinuar" type="Button" parent="MenuPausa/PanelPausa/MarginContainer/VBoxContainer"]
+texture_filter = 1
+custom_minimum_size = Vector2(0, 42)
+layout_mode = 2
+focus_mode = 0
+theme_override_colors/font_color = Color(0.88, 0.98, 1, 1)
+theme_override_font_sizes/font_size = 18
+theme_override_styles/normal = SubResource("StyleBoxTexture_btn_normal")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_btn_pressed")
+theme_override_styles/hover = SubResource("StyleBoxTexture_btn_hover")
+text = "Continuar"
+
+[node name="BtnReiniciarPausa" type="Button" parent="MenuPausa/PanelPausa/MarginContainer/VBoxContainer"]
+texture_filter = 1
+custom_minimum_size = Vector2(0, 42)
+layout_mode = 2
+focus_mode = 0
+theme_override_colors/font_color = Color(0.88, 0.98, 1, 1)
+theme_override_font_sizes/font_size = 18
+theme_override_styles/normal = SubResource("StyleBoxTexture_btn_normal")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_btn_pressed")
+theme_override_styles/hover = SubResource("StyleBoxTexture_btn_hover")
+text = "Reiniciar"
+
+[node name="BtnAudioPausa" type="Button" parent="MenuPausa/PanelPausa/MarginContainer/VBoxContainer"]
+texture_filter = 1
+custom_minimum_size = Vector2(0, 42)
+layout_mode = 2
+focus_mode = 0
+theme_override_colors/font_color = Color(0.88, 0.98, 1, 1)
+theme_override_font_sizes/font_size = 18
+theme_override_styles/normal = SubResource("StyleBoxTexture_btn_normal")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_btn_pressed")
+theme_override_styles/hover = SubResource("StyleBoxTexture_btn_hover")
+text = "Audio: ON"
+
 [connection signal="pressed" from="MarginContainer/TopBar/RightSection/QuickButtons/BtnReiniciar" to="." method="_on_btn_reiniciar_pressed"]
 [connection signal="pressed" from="MarginContainer/TopBar/RightSection/QuickButtons/BtnPausa" to="." method="_on_btn_pausa_pressed"]
 [connection signal="pressed" from="MarginContainer/TopBar/RightSection/QuickButtons/BtnAudio" to="." method="_on_btn_audio_pressed"]
+[connection signal="pressed" from="MenuPausa/PanelPausa/MarginContainer/VBoxContainer/BtnContinuar" to="." method="_on_btn_continuar_pressed"]
+[connection signal="pressed" from="MenuPausa/PanelPausa/MarginContainer/VBoxContainer/BtnReiniciarPausa" to="." method="_on_btn_reiniciar_pressed"]
+[connection signal="pressed" from="MenuPausa/PanelPausa/MarginContainer/VBoxContainer/BtnAudioPausa" to="." method="_on_btn_audio_pressed"]
+
+[node name="MenuMuerte" type="ColorRect" parent="."]
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.08, 0.02, 0.05, 0.72)
+
+[node name="PanelMuerte" type="NinePatchRect" parent="MenuMuerte"]
+texture_filter = 1
+custom_minimum_size = Vector2(320, 230)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -160.0
+offset_top = -115.0
+offset_right = 160.0
+offset_bottom = 115.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("6_marco")
+patch_margin_left = 6
+patch_margin_top = 6
+patch_margin_right = 6
+patch_margin_bottom = 6
+
+[node name="MarginContainer" type="MarginContainer" parent="MenuMuerte/PanelMuerte"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 28
+theme_override_constants/margin_top = 24
+theme_override_constants/margin_right = 28
+theme_override_constants/margin_bottom = 24
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MenuMuerte/PanelMuerte/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 14
+alignment = 1
+
+[node name="HeaderMuerte" type="HBoxContainer" parent="MenuMuerte/PanelMuerte/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 10
+alignment = 1
+
+[node name="IconoMuerte" type="TextureRect" parent="MenuMuerte/PanelMuerte/MarginContainer/VBoxContainer/HeaderMuerte"]
+texture_filter = 1
+custom_minimum_size = Vector2(30, 30)
+layout_mode = 2
+size_flags_vertical = 4
+modulate = Color(1, 0.45, 0.55, 1)
+texture = ExtResource("7_slime")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="TituloMuerte" type="Label" parent="MenuMuerte/PanelMuerte/MarginContainer/VBoxContainer/HeaderMuerte"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.302, 0.427, 1)
+theme_override_font_sizes/font_size = 26
+text = "HAS MUERTO"
+horizontal_alignment = 1
+
+[node name="SubtituloMuerte" type="Label" parent="MenuMuerte/PanelMuerte/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.88, 0.98, 1, 1)
+theme_override_font_sizes/font_size = 16
+text = "Ronda alcanzada: 1 / 10"
+horizontal_alignment = 1
+
+[node name="BtnReintentarMuerte" type="Button" parent="MenuMuerte/PanelMuerte/MarginContainer/VBoxContainer"]
+texture_filter = 1
+custom_minimum_size = Vector2(0, 44)
+layout_mode = 2
+focus_mode = 0
+theme_override_colors/font_color = Color(0.88, 0.98, 1, 1)
+theme_override_font_sizes/font_size = 18
+theme_override_styles/normal = SubResource("StyleBoxTexture_btn_normal")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_btn_pressed")
+theme_override_styles/hover = SubResource("StyleBoxTexture_btn_hover")
+text = "Reintentar"
+
+[connection signal="pressed" from="MenuMuerte/PanelMuerte/MarginContainer/VBoxContainer/BtnReintentarMuerte" to="." method="_on_btn_reiniciar_pressed"]
