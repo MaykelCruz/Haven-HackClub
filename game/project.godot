@@ -13,12 +13,11 @@ config_version=5
 config/name="Game"
 run/main_scene="uid://bfa1788hdc077"
 config/features=PackedStringArray("4.7", "Forward Plus")
-config/icon="res://icon.svg"
+config/icon="res://characters/icon.svg"
 
 [display]
 
 window/stretch/mode="canvas_items"
-window/stretch/aspect="expand"
 
 [input]
 
