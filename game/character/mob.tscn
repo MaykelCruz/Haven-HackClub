@@ -4,6 +4,7 @@
 [ext_resource type="Script" uid="uid://ddx0duj3qqbc3" path="res://character/character_body_2d.gd" id="1_se8db"]
 [ext_resource type="Texture2D" uid="uid://b30rg30eyixut" path="res://character/piso-prueba-piedra.png" id="4_xfxrl"]
 [ext_resource type="Texture2D" uid="uid://s3a3brd4mw56" path="res://character/fondo-prueba.jpeg" id="5_xfxrl"]
+[ext_resource type="PackedScene" path="res://ui/hud/HUD.tscn" id="6_hud"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nsu4t"]
 size = Vector2(128, 116)
@@ -147,3 +148,5 @@ texture = ExtResource("5_xfxrl")
 flip_h = true
 
 [node name="StaticBody2D2" type="StaticBody2D" parent="." unique_id=1752710617]
+
+[node name="HUD" parent="." instance=ExtResource("6_hud")]
