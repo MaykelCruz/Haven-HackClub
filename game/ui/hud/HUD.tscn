@@ -1,0 +1,258 @@
+[gd_scene format=3 uid="uid://d2pvpbhp6rh27"]
+
+[ext_resource type="Script" uid="uid://dcb52c2js0ncq" path="res://ui/hud/hud.gd" id="1_hud_script"]
+[ext_resource type="Texture2D" uid="uid://b5fesjqy3koq6" path="res://ui/hud/slot_bloqueado.png" id="2_bloqueado"]
+[ext_resource type="Texture2D" uid="uid://bkvvx74t5r2cp" path="res://ui/hud/slot_pulso.png" id="3_pulso"]
+[ext_resource type="Texture2D" uid="uid://bjbssj50m0w5m" path="res://ui/hud/slot_dash.png" id="4_dash"]
+[ext_resource type="Texture2D" uid="uid://cpaftqwrvjmjh" path="res://ui/hud/slot_conduccion.png" id="5_conduccion"]
+[ext_resource type="Texture2D" uid="uid://bau4kerjnjb5g" path="res://ui/hud/marco_contador.png" id="6_marco"]
+[ext_resource type="Texture2D" uid="uid://bt0hf4lg08d6t" path="res://ui/hud/icono_slime.png" id="7_slime"]
+[ext_resource type="Texture2D" uid="uid://be6snxfff0e35" path="res://ui/assets/barras/vida_llena.png" id="8_vida_llena"]
+[ext_resource type="Texture2D" uid="uid://dtm116xjjlipy" path="res://ui/assets/barras/vida_vacia.png" id="9_vida_vacia"]
+[ext_resource type="Texture2D" uid="uid://bl4yyotuf3fnf" path="res://ui/assets/teclas/tecla_q.png" id="10_q"]
+[ext_resource type="Texture2D" uid="uid://b3y3oshr3l7" path="res://ui/assets/teclas/tecla_e.png" id="11_e"]
+[ext_resource type="Texture2D" uid="uid://es20cxexl2q" path="res://ui/assets/teclas/tecla_shift.png" id="12_shift"]
+[ext_resource type="Texture2D" uid="uid://bsy8057op3jh" path="res://ui/assets/botones/btn_reiniciar.png" id="13_reiniciar"]
+[ext_resource type="Texture2D" uid="uid://cvnnh1aq7apdc" path="res://ui/assets/botones/btn_pausa.png" id="14_pausa"]
+[ext_resource type="Texture2D" uid="uid://ck6p5fxds6rdd" path="res://ui/assets/botones/btn_audio_on.png" id="15_audio_on"]
+[ext_resource type="Texture2D" uid="uid://dc2m0gg45cyta" path="res://ui/assets/botones/btn_audio_off.png" id="16_audio_off"]
+[ext_resource type="Texture2D" uid="uid://bp0g47ruvs34y" path="res://ui/hud/marco_retrato.png" id="17_marco_retrato"]
+[ext_resource type="Texture2D" uid="uid://k5xfv8lrbx2u" path="res://character/Sorry-Slime.png" id="18_sorry_slime"]
+
+[node name="HUD" type="CanvasLayer" unique_id=1753316437]
+script = ExtResource("1_hud_script")
+mostrar_poderes_en_preview = null
+tex_vida_llena = ExtResource("8_vida_llena")
+tex_vida_vacia = ExtResource("9_vida_vacia")
+tex_bloqueado = ExtResource("2_bloqueado")
+tex_pulso = ExtResource("3_pulso")
+tex_dash = ExtResource("4_dash")
+tex_conduccion = ExtResource("5_conduccion")
+tex_audio_on = ExtResource("15_audio_on")
+tex_audio_off = ExtResource("16_audio_off")
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1845865368]
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 128.0
+grow_horizontal = 2
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 14
+theme_override_constants/margin_right = 16
+
+[node name="TopBar" type="HBoxContainer" parent="MarginContainer" unique_id=2091814044]
+layout_mode = 2
+alignment = 1
+
+[node name="LeftCluster" type="HBoxContainer" parent="MarginContainer/TopBar" unique_id=933277091]
+layout_mode = 2
+theme_override_constants/separation = 12
+alignment = 1
+
+[node name="MarcoRetrato" type="TextureRect" parent="MarginContainer/TopBar/LeftCluster" unique_id=333788369]
+texture_filter = 1
+custom_minimum_size = Vector2(88, 88)
+layout_mode = 2
+size_flags_vertical = 0
+texture = ExtResource("17_marco_retrato")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="RetratoSlime" type="TextureRect" parent="MarginContainer/TopBar/LeftCluster/MarcoRetrato" unique_id=1463716966]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.18
+anchor_top = 0.22
+anchor_right = 0.82
+anchor_bottom = 0.82
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("18_sorry_slime")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="LeftSection" type="VBoxContainer" parent="MarginContainer/TopBar/LeftCluster" unique_id=1120092579]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="BarraVida" type="HBoxContainer" parent="MarginContainer/TopBar/LeftCluster/LeftSection" unique_id=205103619]
+layout_mode = 2
+theme_override_constants/separation = 6
+
+[node name="Vida1" type="TextureRect" parent="MarginContainer/TopBar/LeftCluster/LeftSection/BarraVida" unique_id=52589446]
+texture_filter = 1
+custom_minimum_size = Vector2(54, 22)
+layout_mode = 2
+texture = ExtResource("8_vida_llena")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Vida2" type="TextureRect" parent="MarginContainer/TopBar/LeftCluster/LeftSection/BarraVida" unique_id=1218959203]
+texture_filter = 1
+custom_minimum_size = Vector2(54, 22)
+layout_mode = 2
+texture = ExtResource("8_vida_llena")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Vida3" type="TextureRect" parent="MarginContainer/TopBar/LeftCluster/LeftSection/BarraVida" unique_id=1163727831]
+texture_filter = 1
+custom_minimum_size = Vector2(54, 22)
+layout_mode = 2
+texture = ExtResource("8_vida_llena")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="PowersRow" type="HBoxContainer" parent="MarginContainer/TopBar/LeftCluster/LeftSection" unique_id=1231094768]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="Pulso" type="VBoxContainer" parent="MarginContainer/TopBar/LeftCluster/LeftSection/PowersRow" unique_id=249965896]
+layout_mode = 2
+theme_override_constants/separation = 4
+alignment = 1
+
+[node name="SlotPulso" type="TextureRect" parent="MarginContainer/TopBar/LeftCluster/LeftSection/PowersRow/Pulso" unique_id=983741494]
+texture_filter = 1
+custom_minimum_size = Vector2(52, 52)
+layout_mode = 2
+texture = ExtResource("3_pulso")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="TeclaQ" type="TextureRect" parent="MarginContainer/TopBar/LeftCluster/LeftSection/PowersRow/Pulso" unique_id=1433020656]
+texture_filter = 1
+custom_minimum_size = Vector2(28, 28)
+layout_mode = 2
+size_flags_horizontal = 4
+texture = ExtResource("10_q")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Dash" type="VBoxContainer" parent="MarginContainer/TopBar/LeftCluster/LeftSection/PowersRow" unique_id=1836073903]
+layout_mode = 2
+theme_override_constants/separation = 4
+alignment = 1
+
+[node name="SlotDash" type="TextureRect" parent="MarginContainer/TopBar/LeftCluster/LeftSection/PowersRow/Dash" unique_id=1507712332]
+texture_filter = 1
+custom_minimum_size = Vector2(52, 52)
+layout_mode = 2
+texture = ExtResource("4_dash")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="TeclaE" type="TextureRect" parent="MarginContainer/TopBar/LeftCluster/LeftSection/PowersRow/Dash" unique_id=1108932626]
+texture_filter = 1
+custom_minimum_size = Vector2(28, 28)
+layout_mode = 2
+size_flags_horizontal = 4
+texture = ExtResource("11_e")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Conduccion" type="VBoxContainer" parent="MarginContainer/TopBar/LeftCluster/LeftSection/PowersRow" unique_id=467875603]
+layout_mode = 2
+theme_override_constants/separation = 4
+alignment = 1
+
+[node name="SlotConduccion" type="TextureRect" parent="MarginContainer/TopBar/LeftCluster/LeftSection/PowersRow/Conduccion" unique_id=1138771745]
+texture_filter = 1
+custom_minimum_size = Vector2(52, 52)
+layout_mode = 2
+texture = ExtResource("5_conduccion")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="TeclaShift" type="TextureRect" parent="MarginContainer/TopBar/LeftCluster/LeftSection/PowersRow/Conduccion" unique_id=386864612]
+texture_filter = 1
+custom_minimum_size = Vector2(49, 28)
+layout_mode = 2
+size_flags_horizontal = 4
+texture = ExtResource("12_shift")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Spacer" type="Control" parent="MarginContainer/TopBar" unique_id=979050293]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="RightSection" type="HBoxContainer" parent="MarginContainer/TopBar" unique_id=117186791]
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_constants/separation = 12
+alignment = 2
+
+[node name="DeathCounter" type="NinePatchRect" parent="MarginContainer/TopBar/RightSection" unique_id=1187146954]
+texture_filter = 1
+custom_minimum_size = Vector2(130, 48)
+layout_mode = 2
+texture = ExtResource("6_marco")
+patch_margin_left = 6
+patch_margin_top = 6
+patch_margin_right = 6
+patch_margin_bottom = 6
+
+[node name="Content" type="HBoxContainer" parent="MarginContainer/TopBar/RightSection/DeathCounter" unique_id=1700701677]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 8
+alignment = 1
+
+[node name="IconoSlime" type="TextureRect" parent="MarginContainer/TopBar/RightSection/DeathCounter/Content" unique_id=1611830121]
+texture_filter = 1
+custom_minimum_size = Vector2(28, 28)
+layout_mode = 2
+size_flags_vertical = 4
+texture = ExtResource("7_slime")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="LabelMuertes" type="Label" parent="MarginContainer/TopBar/RightSection/DeathCounter/Content" unique_id=510881747]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.88, 0.98, 1, 1)
+theme_override_font_sizes/font_size = 20
+text = "x 00"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="QuickButtons" type="HBoxContainer" parent="MarginContainer/TopBar/RightSection" unique_id=602221309]
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_constants/separation = 6
+
+[node name="BtnReiniciar" type="TextureButton" parent="MarginContainer/TopBar/RightSection/QuickButtons" unique_id=581594113]
+texture_filter = 1
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+focus_mode = 0
+texture_normal = ExtResource("13_reiniciar")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="BtnPausa" type="TextureButton" parent="MarginContainer/TopBar/RightSection/QuickButtons" unique_id=413833786]
+texture_filter = 1
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+focus_mode = 0
+texture_normal = ExtResource("14_pausa")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="BtnAudio" type="TextureButton" parent="MarginContainer/TopBar/RightSection/QuickButtons" unique_id=1219784159]
+texture_filter = 1
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+focus_mode = 0
+texture_normal = ExtResource("15_audio_on")
+ignore_texture_size = true
+stretch_mode = 5
+
+[connection signal="pressed" from="MarginContainer/TopBar/RightSection/QuickButtons/BtnReiniciar" to="." method="_on_btn_reiniciar_pressed"]
+[connection signal="pressed" from="MarginContainer/TopBar/RightSection/QuickButtons/BtnPausa" to="." method="_on_btn_pausa_pressed"]
+[connection signal="pressed" from="MarginContainer/TopBar/RightSection/QuickButtons/BtnAudio" to="." method="_on_btn_audio_pressed"]
