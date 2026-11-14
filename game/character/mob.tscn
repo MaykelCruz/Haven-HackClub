@@ -1,0 +1,38 @@
+[gd_scene format=3 uid="uid://bfa1788hdc077"]
+
+[ext_resource type="Texture2D" uid="uid://k5xfv8lrbx2u" path="res://character/Sorry-Slime.png" id="1_ix33q"]
+[ext_resource type="Script" uid="uid://ccm4guomjvppq" path="res://character/sorry_slime.gd" id="2_pt1l8"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nsu4t"]
+size = Vector2(128, 96)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pt1l8"]
+size = Vector2(1097, 146)
+
+[node name="Node2D" type="Node2D" unique_id=2001321709]
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=1169317808]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=765457590]
+position = Vector2(256, 456)
+shape = SubResource("RectangleShape2D_nsu4t")
+
+[node name="SorrySlime" type="Sprite2D" parent="CharacterBody2D/CollisionShape2D" unique_id=180682444]
+position = Vector2(0, 8)
+scale = Vector2(0.17777778, 0.19999999)
+texture = ExtResource("1_ix33q")
+script = ExtResource("2_pt1l8")
+
+[node name="ResourcePreloader" type="ResourcePreloader" parent="." unique_id=1343928698]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1927413665]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1922733783]
+position = Vector2(576, 584)
+shape = SubResource("RectangleShape2D_pt1l8")
+
+[node name="ColorRect" type="ColorRect" parent="StaticBody2D/CollisionShape2D" unique_id=1352059962]
+offset_left = -544.0
+offset_top = -72.0
+offset_right = 544.0
+offset_bottom = 64.0
