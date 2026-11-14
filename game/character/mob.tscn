@@ -8,7 +8,6 @@
 [ext_resource type="Texture2D" uid="uid://b30rg30eyixut" path="res://character/piso-prueba-piedra.png" id="4_xfxrl"]
 [ext_resource type="AudioStream" uid="uid://34xltlwh4x2m" path="res://mp3_2 - Galactic Odyssey (Loop).mp3" id="5_7b1sa"]
 [ext_resource type="Texture2D" uid="uid://s3a3brd4mw56" path="res://character/fondo-prueba.jpeg" id="5_xfxrl"]
-[ext_resource type="PackedScene" path="res://ui/hud/HUD.tscn" id="6_hud"]
 
 [sub_resource type="ConvexPolygonShape2D" id="ConvexPolygonShape2D_3hbpb"]
 
@@ -69,13 +68,11 @@ scale = Vector2(0.17777778, 0.19999999)
 texture = ExtResource("1_ix33q")
 
 [node name="Camera2D" type="Camera2D" parent="CharacterBody2D" unique_id=281516550]
-position = Vector2(662, 247)
-zoom = Vector2(0.7, 0.7)
+position = Vector2(579, 425)
 process_callback = 0
 limit_smoothed = true
 position_smoothing_enabled = true
 drag_top_margin = 0.21
-script = ExtResource("3_xfxrl")
 
 [node name="ResourcePreloader" type="ResourcePreloader" parent="." unique_id=1343928698]
 
@@ -166,6 +163,7 @@ position = Vector2(-501, 114)
 motion_scale = Vector2(0.2, 0.2)
 
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer" unique_id=1550385589]
+position = Vector2(1080, 179)
 position = Vector2(780.99994, 148.99997)
 scale = Vector2(2.3242006, 1.973545)
 texture = ExtResource("5_xfxrl")
@@ -194,4 +192,3 @@ flip_h = true
 stream = ExtResource("5_7b1sa")
 volume_db = 8.447
 autoplay = true
-[node name="HUD" parent="." instance=ExtResource("6_hud")]
