@@ -6,7 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://b30rg30eyixut" path="res://character/piso-prueba-piedra.png" id="4_xfxrl"]
 [ext_resource type="AudioStream" uid="uid://34xltlwh4x2m" path="res://mp3_2 - Galactic Odyssey (Loop).mp3" id="5_7b1sa"]
 [ext_resource type="Texture2D" uid="uid://s3a3brd4mw56" path="res://character/fondo-prueba.jpeg" id="5_xfxrl"]
-[ext_resource type="PackedScene" path="res://ui/hud/HUD.tscn" id="6_hud"]
+[ext_resource type="PackedScene" uid="uid://d2pvpbhp6rh27" path="res://ui/hud/HUD.tscn" id="6_hud"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nsu4t"]
 size = Vector2(128, 116)
@@ -129,8 +129,8 @@ position = Vector2(-501, 114)
 motion_scale = Vector2(0.2, 0.2)
 
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer" unique_id=1550385589]
-position = Vector2(1137, 277)
-scale = Vector2(2.3242006, 2.325396)
+position = Vector2(1264.75, 392.99997)
+scale = Vector2(2.573059, 2.7354496)
 texture = ExtResource("5_xfxrl")
 
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer/Sprite2D" unique_id=1779186382]
@@ -157,4 +157,5 @@ flip_h = true
 stream = ExtResource("5_7b1sa")
 volume_db = 8.447
 autoplay = true
-[node name="HUD" parent="." instance=ExtResource("6_hud")]
+
+[node name="HUD" parent="." unique_id=2099921808 instance=ExtResource("6_hud")]
